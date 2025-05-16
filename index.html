@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Khushi</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top left, #fceabb, #f8b500);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    h1 {
+      color: #ff4081;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #444;
+    }
+    input[type="password"] {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 80%;
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .emoji {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="login-box">
+    <h1>Welcome Khushi <span class="emoji">❤️</span></h1>
+    <p>Please enter the password to open a message from me:</p>
+    <input type="password" id="password" placeholder="Enter password">
+    <br>
+    <button onclick="checkPassword()">Open</button>
+  </div>
+
+  <div class="box" id="message-box" style="display:none;">
+    <h1>Dear Khushi <span class="emoji">❤️</span><span class="emoji">😢</span></h1>
+    <p>
+      Even though we're miles apart, you're always close to my heart.  
+      I miss you every single day <span class="emoji">💔</span>.  
+      You're more than a friend to me — you're the one I think about every morning and night.  
+      The distance may keep us apart, but it can never stop my feelings for you.  
+      I’ll always be here for you, no matter how far.  
+      You are special to me in ways I can never fully explain,  
+      and I just want you to know that I truly, deeply love you <span class="emoji">💖</span><span class="emoji">🥺</span><span class="emoji">🌍</span>.
+    </p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = "missyou";
+      const input = document.getElementById("password").value;
+      if (input === password) {
+        document.getElementById("login-box").style.display = "none";
+        document.getElementById("message-box").style.display = "block";
+      } else {
+        alert("Wrong password!");
+      }
+    }
+  </script>
+</body>
+</html>
